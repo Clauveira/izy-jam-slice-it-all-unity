@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2765987934057157090}
   - component: {fileID: 7505139625872092591}
   - component: {fileID: 7491742511917306928}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ObjetoFatiavel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,6 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Fatia1: {fileID: 7532887318401301900}
   Fatia2: {fileID: 8029860527269896172}
+  massa: 0.1
 --- !u!1 &7532887318401301900
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,7 +128,7 @@ GameObject:
   - component: {fileID: 1650047018906484793}
   - component: {fileID: 3331929796773724616}
   - component: {fileID: 6466341266199350376}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fatia1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +176,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 605f9350ebf88124885f9d960dfd6072, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -222,7 +223,7 @@ GameObject:
   - component: {fileID: 2673133421691052654}
   - component: {fileID: 8286631566334545417}
   - component: {fileID: 7133500854204679785}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fatia2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +271,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 605f9350ebf88124885f9d960dfd6072, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

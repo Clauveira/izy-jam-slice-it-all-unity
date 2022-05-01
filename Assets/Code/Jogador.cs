@@ -24,6 +24,7 @@ public class Jogador : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other)
     {
+        Debug.Log(other);
         if (other.gameObject.GetComponent<ObjetoFatiavel>() != null)
         {
             other.gameObject.GetComponent<ObjetoFatiavel>().Fatiar();

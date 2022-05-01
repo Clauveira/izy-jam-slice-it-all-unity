@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5786058175837515521}
   - component: {fileID: 456220837100143462}
   - component: {fileID: 1705629322704079622}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fatia2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 7184069248003181910}
   - component: {fileID: 6586991167821860007}
   - component: {fileID: 3236358537774334215}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fatia1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 5996004905233079437}
   - component: {fileID: 2122120490188595392}
   - component: {fileID: 1345681222936992095}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Objeto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,3 +305,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Fatia1: {fileID: 2152409410764157155}
   Fatia2: {fileID: 1890137958255612547}
+  massa: 0.1

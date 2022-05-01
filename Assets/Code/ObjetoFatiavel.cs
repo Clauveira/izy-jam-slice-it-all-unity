@@ -8,6 +8,9 @@ public class ObjetoFatiavel : MonoBehaviour
     public GameObject Fatia2;
     private Rigidbody Fatia1_Rigidbody;
     private Rigidbody Fatia2_Rigidbody;
+
+    public float massa = 0.1f;
+
     void Start()
     {
 
@@ -29,8 +32,8 @@ public class ObjetoFatiavel : MonoBehaviour
             Fatia1_Rigidbody = Fatia1.GetComponent<Rigidbody>();
             Fatia2_Rigidbody = Fatia2.GetComponent<Rigidbody>();
 
-            Fatia1_Rigidbody.mass = 0.1f;
-            Fatia2_Rigidbody.mass = 0.1f;
+            Fatia1_Rigidbody.mass = massa;
+            Fatia2_Rigidbody.mass = massa;
 
             Fatia1_Rigidbody.AddForce(new Vector3(0f, 5f, 10f));
             Fatia2_Rigidbody.AddForce(new Vector3(0f, 5f, -10f));
