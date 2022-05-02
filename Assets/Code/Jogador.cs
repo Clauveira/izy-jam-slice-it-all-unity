@@ -1,30 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Jogador : MonoBehaviour
 {
-    private Rigidbody Faca_Rigidbody;
-    public MeshCollider Faca_Collider;
-    private bool Eh_Mobile = false;
+    private Rigidbody faca_rigidbody;
+    private bool eh_mobile = false;
     void Start()
     {
-        Faca_Rigidbody = GetComponent<Rigidbody>();
-        Eh_Mobile = Application.platform == RuntimePlatform.Android;
+        faca_rigidbody = GetComponent<Rigidbody>();
+        eh_mobile = Application.platform == RuntimePlatform.Android;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("space") || (Eh_Mobile && Input.GetTouch(0).phase == TouchPhase.Began))
+        if (Input.GetKeyDown("space") || Input.GetMouseButtonDown(0) || (eh_mobile && Input.GetTouch(0).phase == TouchPhase.Began))
         {
-            Faca_Rigidbody.AddForce(new Vector3(70f, 300f, 0f));
-            Faca_Rigidbody.AddTorque(new Vector3(0f, 0f, -30f));
+            faca_rigidbody.AddForce(new Vector3(70f, 300f, 0f));
+            faca_rigidbody.AddTorque(new Vector3(0f, 0f, -30f));
+        }
+        if (faca_rigidbody.transform.position.y < -3)
+        {
+            reset_nivel();
         }
     }
+
+    public void reset_nivel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log(other);
         if (other.gameObject.GetComponent<ObjetoFatiavel>() != null)
         {
             other.gameObject.GetComponent<ObjetoFatiavel>().Fatiar();

@@ -1,62 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1261681960531055215
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6127465348257712971}
-  - component: {fileID: 8448176850927345609}
-  - component: {fileID: 4197156496827978843}
-  m_Layer: 7
-  m_Name: Lamina
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6127465348257712971
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1261681960531055215}
-  m_LocalRotation: {x: 0.02605471, y: -0, z: -0, w: 0.99966055}
-  m_LocalPosition: {x: 0, y: 0.01, z: -0.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2957507765160692138}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 2.986, y: 0, z: 0}
---- !u!65 &8448176850927345609
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1261681960531055215}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 23.186182, z: 3.1043663}
-  m_Center: {x: 1.2921984e-14, y: 2.7454457, z: 0.8000971}
---- !u!114 &4197156496827978843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1261681960531055215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8012ebee9967dcc498eabe7d14252af3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2954541346304872410
 GameObject:
   m_ObjectHideFlags: 0
@@ -68,6 +11,7 @@ GameObject:
   - component: {fileID: 2957507765160692138}
   - component: {fileID: 2986876933149221878}
   - component: {fileID: 2977306843335923912}
+  - component: {fileID: 3180504225875188152}
   m_Layer: 9
   m_Name: Combat_LODC
   m_TagString: Untagged
@@ -85,8 +29,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0.76, y: 1.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 6127465348257712971}
+  m_Children: []
   m_Father: {fileID: 2957359828350433756}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -139,6 +82,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3180504225875188152
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2954541346304872410}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 75335fb43235a1c4a8a3f0b3994f9986, type: 3}
 --- !u!1 &2956126975392109432
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,7 +105,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2957359828350433756}
-  - component: {fileID: 3021338190475240846}
   - component: {fileID: 2956007600130202748}
   - component: {fileID: 2956007600130202749}
   m_Layer: 9
@@ -173,19 +129,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -140.112}
---- !u!65 &3021338190475240846
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2956126975392109432}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.4663944, y: 32.85883, z: 2.06}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &2956007600130202748
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -201,7 +144,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 56
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &2956007600130202749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,4 +157,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96209520f21eda74f80dd66142586161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Faca_Collider: {fileID: 0}

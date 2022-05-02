@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class ObjetoFatiavel : MonoBehaviour
 {
-    public GameObject Fatia1;
-    public GameObject Fatia2;
-    private Rigidbody Fatia1_Rigidbody;
-    private Rigidbody Fatia2_Rigidbody;
+    public GameObject fatia1;
+    public GameObject fatia2;
+    private Rigidbody fatia1_rigidbody;
+    private Rigidbody fatia2_rigidbody;
 
     public float massa = 0.1f;
 
     void Start()
     {
-
     }
 
-    // Update is called once per frame
     void Update()
     {
     }
@@ -26,17 +24,20 @@ public class ObjetoFatiavel : MonoBehaviour
         if (GetComponent<Rigidbody>())
         {
             Destroy(GetComponent<Rigidbody>());
-            Fatia1.AddComponent<Rigidbody>();
-            Fatia2_Rigidbody = Fatia2.AddComponent<Rigidbody>();
-
-            Fatia1_Rigidbody = Fatia1.GetComponent<Rigidbody>();
-            Fatia2_Rigidbody = Fatia2.GetComponent<Rigidbody>();
-
-            Fatia1_Rigidbody.mass = massa;
-            Fatia2_Rigidbody.mass = massa;
-
-            Fatia1_Rigidbody.AddForce(new Vector3(0f, 5f, 10f));
-            Fatia2_Rigidbody.AddForce(new Vector3(0f, 5f, -10f));
+            if (!fatia1.GetComponent<Rigidbody>())
+            {
+                fatia1.AddComponent<Rigidbody>();
+                fatia1_rigidbody = fatia1.GetComponent<Rigidbody>();
+                fatia1_rigidbody.mass = massa;
+                fatia1_rigidbody.AddForce(new Vector3(0f, 5f, 10f));
+            }
+            if (!fatia2.GetComponent<Rigidbody>())
+            {
+                fatia2.AddComponent<Rigidbody>();
+                fatia2_rigidbody = fatia2.GetComponent<Rigidbody>();
+                fatia2_rigidbody.mass = massa;
+                fatia2_rigidbody.AddForce(new Vector3(0f, 5f, -10f));
+            }
 
         }
     }
