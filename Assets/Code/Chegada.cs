@@ -14,7 +14,7 @@ public class Chegada : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(0.0f, 0.1f, 0.0f, Space.Self);
+        transform.Rotate(0.0f, 100.0f * Time.deltaTime, 0.0f, Space.Self);
     }
     private void OnCollisionEnter(Collision other)
     {
