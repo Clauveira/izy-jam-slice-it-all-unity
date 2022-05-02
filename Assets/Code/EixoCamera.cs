@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class EixoCamera : MonoBehaviour
 {
-    public Rigidbody player_Rigidbody;
+    public Rigidbody player_rigidbody;
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        transform.position = player_Rigidbody.transform.position;
+        transform.position = player_rigidbody.transform.position;
     }
 }
